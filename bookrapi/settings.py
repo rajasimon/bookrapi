@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'bookrapi.core',
     'corsheaders',
-    'chunked_upload',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,3 +128,17 @@ CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000'
 )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+ASGI_APPLICATION = "bookrapi.routing.application"
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+    },
+}

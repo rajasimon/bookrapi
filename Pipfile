@@ -8,7 +8,8 @@ verify_ssl = true
 [packages]
 django = "*"
 django-cors-headers = "*"
-django-chunked-upload = "*"
+channels = "*"
+channels-redis = "*"
 
 [requires]
 python_version = "3.7"

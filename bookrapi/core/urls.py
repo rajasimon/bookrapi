@@ -1,8 +1,7 @@
 from django.urls import path
 
-from .views import BookrChunkedUploadView, BookrChunkedUploadCompleteView
+from .views import Upload
 
 urlpatterns = [
-    path('upload/', BookrChunkedUploadView.as_view()),
-    path('upload_complete/', BookrChunkedUploadCompleteView.as_view())
+    path('upload/', Upload.as_view()),
 ]
