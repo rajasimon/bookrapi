@@ -10,6 +10,8 @@ django = "*"
 django-cors-headers = "*"
 channels = "*"
 channels-redis = "*"
+django-heroku = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
